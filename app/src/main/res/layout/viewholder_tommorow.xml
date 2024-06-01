@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:layout_marginTop="23dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/dayTxtV"
+                android:layout_width="80dp"
+                android:layout_height="79dp"
+                android:padding="20dp"
+                android:text="day"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/black_01"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="74dp"
+                android:layout_height="79dp"
+                android:layout_marginStart="5dp"
+                android:padding="2dp"
+                app:srcCompat="@drawable/snowy" />
+
+            <TextView
+                android:id="@+id/weatherType2"
+                android:layout_width="84dp"
+                android:layout_height="79dp"
+                android:padding="20dp"
+                android:text="Storm"
+                android:textAlignment="center"
+                android:textColor="@color/black_01"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lowTxV"
+                android:layout_width="74dp"
+                android:layout_height="69dp"
+                android:padding="2dp"
+                android:text="最低:27°"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/black_01"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/highTxv"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:padding="2dp"
+                android:text="最高:33°"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/black_01"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="sort_options">
+        <item>温度</item>
+        <item>日期</item>
+        <item>天气类型</item>
+    </string-array>
+</resources>

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TAIRPWeather" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimaryDark">@color/black_01</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.TAIRPWeather" parent="Base.Theme.TAIRPWeather" />
+</resources>

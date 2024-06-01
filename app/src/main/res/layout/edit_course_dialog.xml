@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="事件标题" />
+
+    <EditText
+        android:id="@+id/edit_course_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入事件标题" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始时间" />
+
+    <EditText
+        android:id="@+id/edit_course_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入开始时间" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="事件地点" />
+
+    <EditText
+        android:id="@+id/edit_course_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入事件地点" />
+
+</LinearLayout>
