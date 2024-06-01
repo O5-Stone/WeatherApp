@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setCity("沈阳市");
+        setCity("沈阳市");// 默认城市设置为沈阳
 
         mWeatherType = findViewById(R.id.weatherType);
         mTemperature = findViewById(R.id.temperature);
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         mp3Btn = findViewById(R.id.mp3Btn);
         scheduleBtn = findViewById(R.id.scheduleBtn);
 
-
+        // 获取当前日期并设置
         SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy");
         String currentDate = format.format(new Date());
         date.setText(currentDate);
@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
             letsdoSomeNetworking(params);
         });
 
+        // 搜索按钮点击事件监听器
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 查看按钮点击事件监听器
         viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,6 +146,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // 天气图标点击事件监听器
         mWeatherIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,10 +167,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        // MP3按钮点击事件监听器
         mp3Btn.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, MediaActivity.class);
             startActivity(intent);
         });
+        // 日程表按钮点击事件监听器
        scheduleBtn.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, CourseActivity.class);
             startActivity(intent);
@@ -214,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-
+        // 获取位置权限并监听位置变化
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE);
             return;
@@ -236,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     private void letsdoSomeNetworking(RequestParams params) {
-        // 创建一个异步HTTP客户端
+        // 创建异步HTTP客户端
         AsyncHttpClient client = new AsyncHttpClient();
         // 发送GET请求，并传入参数
         client.get(apiUrl, params, new JsonHttpResponseHandler() {
